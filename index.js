@@ -8,6 +8,9 @@ app.get('/', (req, res) => {
   res.send('working fine');
 });
 
+app.get('/healths',(req,res)=>{
+    res.send("api health is good");
+});
 
 app.listen(port, () => {
   console.log(`App listening at http://localhost:${process.env.PORT}`);
