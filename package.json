@@ -1,21 +1,33 @@
 {
-  "name": "lyrics_generator",
+  "name": "lyric_generator",
   "version": "1.0.0",
+  "scripts": {
+    "start": "node dist/app.js",
+    "dev": "nodemon --exec ts-node ./src/app.ts",
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.6.5",
+    "sequelize": "^6.35.2"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/node": "^20.17.14",
+    "nodemon": "^3.1.9",
+    "sequelize-cli": "^6.6.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  },
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
-  },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "axios": "^1.7.9",
-    "dotenv": "^16.4.7",
-    "express": "^4.21.2",
-    "mysql2": "^3.11.5",
-    "nodemon": "^3.1.9",
-    "sequelize": "^6.37.5"
-  }
+  "license": "ISC"
 }
